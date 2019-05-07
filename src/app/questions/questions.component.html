@@ -1,0 +1,51 @@
+
+<div *ngIf="this.endMessage">
+  {{this.endMessage}}
+</div>
+
+<div *ngIf="this.currentQuestion">
+  Question <b>{{this.questionsTaken}}</b> of <b>{{this.maxQuestionsAllowed}}</b>
+  <br />
+  Correct Answers: {{this.totalCorrect}}
+  <br />
+  Wrong Answers: {{this.totalWrong}}
+</div>
+<br />
+
+<div *ngIf="!this.currentQuestion">
+  <button class="btn btn-outline-primary" (click)="this.getNextQuestion()">Start the questions</button>
+</div>
+<br />
+<br />
+<div *ngIf="this.currentQuestion">
+  <b>Category</b>
+  <br/>
+  {{this.currentQuestion.category}}<br/>
+  <b>Sub-Category</b>
+  <br/>
+  {{this.currentQuestion.subCategory}}<br/>
+  <br/>
+  <br />
+  <p style="font-size: larger">{{this.currentQuestion.question}}</p>
+  <br />
+  <br />
+  <div *ngIf="!this.showAnswerFlag">
+    <button class="btn btn-outline-info" (click)="this.showAnswer()">Show Answer</button>
+  </div>
+  <div *ngIf="this.showAnswerFlag">
+    <!-- {{this.currentQuestion.answer}} -->
+    <ul>
+      <li *ngFor="let currentAnswer of this.currentAnswerList">
+        {{currentAnswer}}
+      </li>
+    </ul>
+    <br>
+    <br>
+    <button class="btn btn-outline-danger" (click)="this.wrongAnswer()">Wrong Answer</button>
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    <button class="btn btn-outline-success" (click)="this.correctAnswer()">Correct Answer</button>
+  </div>
+
+</div>
