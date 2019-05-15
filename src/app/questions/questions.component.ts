@@ -20,6 +20,7 @@ export class QuestionsComponent implements OnInit {
   totalCorrect = 0;
   totalWrong = 0;
   endMessage = '';
+  endPic = '';
 
   get currentAnswerList(): string[] {
     let result = [];
@@ -30,6 +31,7 @@ export class QuestionsComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.resetQuestionnaire();
   }
 
   getNextQuestion() {
@@ -64,10 +66,16 @@ export class QuestionsComponent implements OnInit {
   finishQuestionnaire() {
     if (this.totalCorrect >= 6) {
       this.endMessage = 'Congratulations! You have passed the test!';
+      this.endPic = 'assets/passed.svg';
     } else {
       this.endMessage = 'You\'ve failed the test. Better luck next time';
+      this.endPic = 'assets/failed.svg';
     }
-    this.maxQuestionsAllowed = 6;
+    this.resetQuestionnaire();
+  }
+
+  resetQuestionnaire() {
+    this.maxQuestionsAllowed = 10;
     this.questionsTaken = 0;
     this.questionsAttempted = [];
     this.currentQuestion = null;

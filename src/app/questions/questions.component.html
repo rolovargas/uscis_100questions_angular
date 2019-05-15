@@ -1,6 +1,11 @@
 
 <div *ngIf="this.endMessage">
   {{this.endMessage}}
+  <br/>
+  <div *ngIf="this.endPic">
+    <img height="150px" alt="USCIS Logo" src="{{this.endPic}}">
+  </div>
+
 </div>
 
 <div *ngIf="this.currentQuestion">
@@ -13,7 +18,7 @@
 <br />
 
 <div *ngIf="!this.currentQuestion">
-  <button class="btn btn-outline-primary" (click)="this.getNextQuestion()">Start the questions</button>
+  <button class="btn btn-outline-primary" (click)="this.getNextQuestion()">Start the questionnaire</button>
 </div>
 <br />
 <br />
