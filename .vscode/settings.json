@@ -1,5 +1,7 @@
 {
 	"workbench.colorCustomizations": {
 		"titleBar.activeBackground": "#023C6F" // change this color!
-	  }
+		},
+		"appService.defaultWebAppToDeploy": "/subscriptions/0cd5dcb6-caf4-4add-a314-ca6f931146bd/resourceGroups/100questions/providers/Microsoft.Web/sites/100questions",
+		"appService.deploySubpath": "dist\\questions"
 }
