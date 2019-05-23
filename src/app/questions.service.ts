@@ -60,7 +60,7 @@ export class QuestionsService {
     this.allQuestions.push(new Question('American Government', 'System of Government', 'Who is the Governor of your state now?', 'Answers will vary. [District of Columbia residents should answer that D.C. does not have a Governor.]\nDoug Doucey.'));
     this.allQuestions.push(new Question('American Government', 'System of Government', 'What is the capital of your state?', 'Answers will vary. [District of Columbia residents should answer that D.C. is not a state and does not have a capital. Residents of U.S. territories should name the capital of the territory.]'));
     this.allQuestions.push(new Question('American Government', 'System of Government', 'What are the two major political parties in the United States?', 'Democratic and Republican'));
-    this.allQuestions.push(new Question('American Government', 'System of Government', 'What is the political party of the President now?', 'Visit uscis.gov/citizenship/testupdates for the political party of the President.\nRepulibcan'));
+    this.allQuestions.push(new Question('American Government', 'System of Government', 'What is the political party of the President now?', 'Visit uscis.gov/citizenship/testupdates for the political party of the President.\nRepublican'));
     this.allQuestions.push(new Question('American Government', 'System of Government', 'What is the name of the Speaker of the House of Representatives now?', 'Visit uscis.gov/citizenship/testupdates for the name of the Speaker of the House of Representatives.\nNancy Pelosi'));
 
 
