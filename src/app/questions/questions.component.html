@@ -16,12 +16,10 @@
   <br />
   Wrong Answers: {{this.totalWrong}}
 </div>
-<br />
 
 <div *ngIf="!this.currentQuestion">
   <button class="btn btn-outline-primary" (click)="this.startQuestionaire()">Start the questionnaire</button>
 </div>
-<br />
 <br />
 <div *ngIf="this.currentQuestion">
   <b>Category</b>

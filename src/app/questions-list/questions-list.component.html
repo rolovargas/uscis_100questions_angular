@@ -1,0 +1,9 @@
+
+<div *ngFor="let currentQuestion of this.allQuestions">
+  <b>{{currentQuestion.question}}</b><br/>
+  <ul>
+      <li *ngFor="let currentAnswer of formatAnswer(currentQuestion.answer)">
+        {{currentAnswer}}
+      </li>
+  </ul>
+</div>

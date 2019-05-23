@@ -129,6 +129,10 @@ export class QuestionsService {
 
   }
 
+  getAllQuestions(): Question[] {
+    return this.allQuestions;
+  }
+
   getNextQuestion(alreadyAsked: Question[]): Question {
     let result: Question;
     let maxAttempts = 50;
