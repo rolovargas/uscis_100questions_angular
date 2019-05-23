@@ -6,6 +6,7 @@
     <img height="150px" alt="USCIS Logo" src="{{this.endPic}}">
   </div>
 
+  You got {{this.totalCorrect}} correct answers out of {{this.maxQuestionsAllowed}}.
 </div>
 
 <div *ngIf="this.currentQuestion">
@@ -18,7 +19,7 @@
 <br />
 
 <div *ngIf="!this.currentQuestion">
-  <button class="btn btn-outline-primary" (click)="this.getNextQuestion()">Start the questionnaire</button>
+  <button class="btn btn-outline-primary" (click)="this.startQuestionaire()">Start the questionnaire</button>
 </div>
 <br />
 <br />

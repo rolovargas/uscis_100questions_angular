@@ -71,7 +71,7 @@ export class QuestionsComponent implements OnInit {
       this.endMessage = 'You\'ve failed the test. Better luck next time';
       this.endPic = 'assets/failed.svg';
     }
-    this.resetQuestionnaire();
+    this.currentQuestion = null;
   }
 
   resetQuestionnaire() {
@@ -82,5 +82,10 @@ export class QuestionsComponent implements OnInit {
     this.showAnswerFlag = false;
     this.totalCorrect = 0;
     this.totalWrong = 0;
+  }
+
+  startQuestionaire() {
+    this.resetQuestionnaire();
+    this.getNextQuestion();
   }
 }
