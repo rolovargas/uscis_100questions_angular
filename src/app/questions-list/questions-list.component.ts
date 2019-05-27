@@ -22,6 +22,18 @@ export class QuestionsListComponent implements OnInit {
     this.allQuestions = this.questionsService.getAllQuestions();
   }
 
+  getCategories() {
+    return new Set(this.allQuestions.map(x => x.category));
+  }
+
+  getSubCategories(category) {
+    return new Set(this.allQuestions.filter(x => x.category === category).map(y => y.subCategory));
+  }
+
+  getQuestionsByCategory(category, subCategory) {
+    return this.allQuestions.filter(x => x.category === category && x.subCategory === subCategory);
+  }
+
   formatAnswer(answer: string): string[] {
     let result = [];
     result = answer.split('\n');
