@@ -1,12 +1,11 @@
 
 <div *ngIf="this.endMessage">
   {{this.endMessage}}
-  <br/>
   <div *ngIf="this.endPic">
     <img height="150px" alt="USCIS Logo" src="{{this.endPic}}">
   </div>
-
-  You got {{this.totalCorrect}} correct answers out of {{this.maxQuestionsAllowed}}.
+  <p>You got <b>{{this.totalCorrect}}</b> correct answers out of <b>{{this.maxQuestionsAllowed}}</b>.</p>
+  <br/>
 </div>
 
 <div *ngIf="this.currentQuestion">
@@ -22,17 +21,10 @@
 </div>
 <br />
 <div *ngIf="this.currentQuestion">
-  <b>Category</b>
-  <br/>
-  {{this.currentQuestion.category}}<br/>
-  <b>Sub-Category</b>
-  <br/>
-  {{this.currentQuestion.subCategory}}<br/>
-  <br/>
-  <br />
-  <p style="font-size: larger">{{this.currentQuestion.question}}</p>
-  <br />
-  <br />
+  <b>Category:</b>&nbsp;{{this.currentQuestion.category}}<br/>
+  <b>Sub-Category:</b>&nbsp;{{this.currentQuestion.subCategory}}<br/>
+  <hr/>
+  <p style="font-size: larger"><b>{{this.currentQuestion.question}}</b></p>
   <div *ngIf="!this.showAnswerFlag">
     <button class="btn btn-outline-info" (click)="this.showAnswer()">Show Answer</button>
   </div>
@@ -43,7 +35,6 @@
         {{currentAnswer}}
       </li>
     </ul>
-    <br>
     <br>
     <button class="btn btn-outline-danger" (click)="this.wrongAnswer()">Wrong Answer</button>
     &nbsp;
