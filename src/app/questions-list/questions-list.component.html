@@ -1,9 +1,16 @@
-
-<div *ngFor="let currentQuestion of this.allQuestions">
-  <b>{{currentQuestion.question}}</b><br/>
-  <ul>
-      <li *ngFor="let currentAnswer of formatAnswer(currentQuestion.answer)">
-        {{currentAnswer}}
-      </li>
-  </ul>
+<div *ngFor="let currentCategory of this.getCategories()">
+  <h3><b>{{currentCategory}}</b></h3>
+  <div style="padding-left: 24px" *ngFor="let currentSubCategory of this.getSubCategories(currentCategory)">
+    <h4><b>{{currentSubCategory}}</b></h4>
+    <div style="padding-left: 48px" *ngFor="let currentQuestion of this.getQuestionsByCategory(currentCategory, currentSubCategory)">
+      <b>{{currentQuestion.question}}</b>
+      <br/>
+      <ul>
+        <li *ngFor="let currentAnswer of formatAnswer(currentQuestion.answer)">
+              {{currentAnswer}}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <hr/>
 </div>

@@ -1,14 +1,18 @@
 <nav>
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
-    <a class="nav-item nav-link active" id="nav-questionnaire-tab" data-toggle="tab" href="#nav-questionnaire" role="tab" aria-controls="nav-questionnaire" aria-selected="true">Questionnaire</a>
+    <a class="nav-item nav-link active" id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab" aria-controls="nav-about" aria-selected="true">About</a>
     <a class="nav-item nav-link" id="nav-questionslist-tab" data-toggle="tab" href="#nav-questionslist" role="tab" aria-controls="nav-questionslist" aria-selected="false">Questions List</a>
+    <a class="nav-item nav-link" id="nav-questionnaire-tab" data-toggle="tab" href="#nav-questionnaire" role="tab" aria-controls="nav-questionnaire" aria-selected="false">Questionnaire</a>
   </div>
 </nav>
 <div class="tab-content" id="nav-tabContent">
-  <div style="padding-top: 8px; padding-bottom: 8px" class="tab-pane fade show active" id="nav-questionnaire" role="tabpanel" aria-labelledby="nav-questionnaire-tab">
-    <app-questions></app-questions>
+  <div style="padding-top: 8px; padding-bottom: 8px" class="tab-pane fade show active" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+    <app-about></app-about>
   </div>
   <div style="padding-top: 8px; padding-bottom: 8px" class="tab-pane fade" id="nav-questionslist" role="tabpanel" aria-labelledby="nav-questionslist-tab">
     <app-questions-list></app-questions-list>
+  </div>
+  <div style="padding-top: 8px; padding-bottom: 8px" class="tab-pane fade" id="nav-questionnaire" role="tabpanel" aria-labelledby="nav-questionnaire-tab">
+    <app-questions></app-questions>
   </div>
 </div>
