@@ -7,6 +7,7 @@ import { QuestionsComponent } from './questions/questions.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { QuestionsListComponent } from './questions-list/questions-list.component';
 import { AboutComponent } from './about/about.component';
+import { OathComponent } from './oath/oath.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AboutComponent } from './about/about.component';
     QuestionsComponent,
     HomepageComponent,
     QuestionsListComponent,
-    AboutComponent
+    AboutComponent,
+    OathComponent
   ],
   imports: [
     BrowserModule,
