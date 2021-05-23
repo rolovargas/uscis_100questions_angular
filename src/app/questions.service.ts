@@ -40,8 +40,8 @@ export class QuestionsService {
     this.allQuestions.push(new Question('American Government', 'System of Government', 'Why do some states have more Representatives than other states ?', '(because of) the state’s population\n(because) they have more people\n(because) some states have more people'));
     this.allQuestions.push(new Question('American Government', 'System of Government', 'We elect a President for how many years?', 'four (4)'));
     this.allQuestions.push(new Question('American Government', 'System of Government', 'In what month do we vote for President?', 'November'));
-    this.allQuestions.push(new Question('American Government', 'System of Government', 'What is the name of the President of the United States now?', 'Visit uscis.gov/citizenship/testupdates for the name of the President of the United States.\nDonald Trump'));
-    this.allQuestions.push(new Question('American Government', 'System of Government', 'What is the name of the Vice President of the United States now?', 'Visit uscis.gov/citizenship/testupdates for the name of the Vice President of the United States.\nMike Pence'));
+    this.allQuestions.push(new Question('American Government', 'System of Government', 'What is the name of the President of the United States now?', 'Visit uscis.gov/citizenship/testupdates for the name of the President of the United States.\nJoe Biden'));
+    this.allQuestions.push(new Question('American Government', 'System of Government', 'What is the name of the Vice President of the United States now?', 'Visit uscis.gov/citizenship/testupdates for the name of the Vice President of the United States.\nKamala Harris'));
     this.allQuestions.push(new Question('American Government', 'System of Government', 'If the President can no longer serve, who becomes President?', 'the Vice President'));
     this.allQuestions.push(new Question('American Government', 'System of Government', 'If both the President and the Vice President can no longer serve, who becomes President?', 'the Speaker of the House'));
     this.allQuestions.push(new Question('American Government', 'System of Government', 'Who is the Commander in Chief of the military?', 'the President'));
@@ -60,7 +60,7 @@ export class QuestionsService {
     this.allQuestions.push(new Question('American Government', 'System of Government', 'Who is the Governor of your state now?', 'Answers will vary. [District of Columbia residents should answer that D.C. does not have a Governor.]\nDoug Doucey.'));
     this.allQuestions.push(new Question('American Government', 'System of Government', 'What is the capital of your state?', 'Answers will vary. [District of Columbia residents should answer that D.C. is not a state and does not have a capital. Residents of U.S. territories should name the capital of the territory.]\nPhoenix is the capital of Arizona'));
     this.allQuestions.push(new Question('American Government', 'System of Government', 'What are the two major political parties in the United States?', 'Democratic and Republican'));
-    this.allQuestions.push(new Question('American Government', 'System of Government', 'What is the political party of the President now?', 'Visit uscis.gov/citizenship/testupdates for the political party of the President.\nRepublican'));
+    this.allQuestions.push(new Question('American Government', 'System of Government', 'What is the political party of the President now?', 'Visit uscis.gov/citizenship/testupdates for the political party of the President.\nDemocrat'));
     this.allQuestions.push(new Question('American Government', 'System of Government', 'What is the name of the Speaker of the House of Representatives now?', 'Visit uscis.gov/citizenship/testupdates for the name of the Speaker of the House of Representatives.\nNancy Pelosi'));
 
 
