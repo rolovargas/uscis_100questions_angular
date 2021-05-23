@@ -3,7 +3,7 @@
   <div style="padding-left: 24px" *ngFor="let currentSubCategory of this.getSubCategories(currentCategory)">
     <h4><b>{{currentSubCategory}}</b></h4>
     <div style="padding-left: 48px" *ngFor="let currentQuestion of this.getQuestionsByCategory(currentCategory, currentSubCategory)">
-      <b>{{currentQuestion.question}}</b>
+      <b>{{currentQuestion.questionNumber}}. {{currentQuestion.question}}</b>
       <br/>
       <ul>
         <li *ngFor="let currentAnswer of formatAnswer(currentQuestion.answer)">
