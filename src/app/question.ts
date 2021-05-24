@@ -5,10 +5,10 @@ export class Question {
   question = '';
   answer = '';
 
-  constructor(questionNumber, category, subCategory, question, answer) {
-    this.questionNumber = questionNumber;
+  constructor(category, subCategory, questionNumber, question, answer) {
     this.category = category;
     this.subCategory = subCategory;
+    this.questionNumber = questionNumber;
     this.question = question;
     this.answer = answer;
   }
