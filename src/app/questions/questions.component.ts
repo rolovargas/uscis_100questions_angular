@@ -15,7 +15,7 @@ export class QuestionsComponent implements OnInit {
   maxQuestionsAllowed = 10;
   questionsTaken = 0;
   questionsAttempted: Question[] = [];
-  currentQuestion: Question = null;
+  currentQuestion: Question = new Question('', '', 0, '', '');
   showAnswerFlag = false;
   totalCorrect = 0;
   totalWrong = 0;
@@ -23,8 +23,8 @@ export class QuestionsComponent implements OnInit {
   endPic = '';
 
   get currentAnswerList(): string[] {
-    let result = [];
-    if (this.currentQuestion != null) {
+    let result: string[] = [];
+    if (this.currentQuestion.questionNumber > 0) {
       result = this.currentQuestion.answer.split('\n');
     }
     return result;
@@ -71,20 +71,20 @@ export class QuestionsComponent implements OnInit {
       this.endMessage = 'You\'ve failed the test. Better luck next time';
       this.endPic = 'assets/failed.svg';
     }
-    this.currentQuestion = null;
+    this.currentQuestion = new Question('', '', 0, '','');
   }
 
   resetQuestionnaire() {
     this.maxQuestionsAllowed = 10;
     this.questionsTaken = 0;
     this.questionsAttempted = [];
-    this.currentQuestion = null;
+    this.currentQuestion = new Question('', '', 0, '','');
     this.showAnswerFlag = false;
     this.totalCorrect = 0;
     this.totalWrong = 0;
   }
 
-  startQuestionaire() {
+  startQuestionnaire() {
     this.resetQuestionnaire();
     this.getNextQuestion();
   }

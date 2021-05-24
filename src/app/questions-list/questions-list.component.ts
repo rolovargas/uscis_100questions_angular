@@ -26,11 +26,11 @@ export class QuestionsListComponent implements OnInit {
     return new Set(this.allQuestions.map(x => x.category));
   }
 
-  getSubCategories(category) {
+  getSubCategories(category: string) {
     return new Set(this.allQuestions.filter(x => x.category === category).map(y => y.subCategory));
   }
 
-  getQuestionsByCategory(category, subCategory) {
+  getQuestionsByCategory(category: string, subCategory: string) {
     return this.allQuestions.filter(x => x.category === category && x.subCategory === subCategory);
   }
 
