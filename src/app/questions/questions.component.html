@@ -16,11 +16,11 @@
   Wrong Answers: {{this.totalWrong}}
 </div>
 
-<div *ngIf="!this.currentQuestion">
-  <button class="btn btn-outline-primary" (click)="this.startQuestionnaire()">Start the questionnaire</button>
+<div *ngIf="this.currentQuestion.questionNumber <= 0">
+  <button class="btn btn-outline-primary mt-2" (click)="this.startQuestionnaire()">Start the questionnaire</button>
 </div>
 <br />
-<div *ngIf="this.currentQuestion">
+<div *ngIf="this.currentQuestion.questionNumber > 0">
   <b>Category:</b>&nbsp;{{this.currentQuestion.category}}<br/>
   <b>Sub-Category:</b>&nbsp;{{this.currentQuestion.subCategory}}<br/>
   <hr/>
