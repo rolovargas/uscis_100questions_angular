@@ -155,7 +155,7 @@ export class QuestionsService {
   }
 
   getNextQuestion(alreadyAsked: Question[]): Question {
-    let result: Question;
+    let result: Question = new Question('', '', 0, '','');
     let maxAttempts = 50;
     while (maxAttempts-- > 0) {
       const randomIndex: number = Math.floor(Math.random() * this.allQuestions.length);

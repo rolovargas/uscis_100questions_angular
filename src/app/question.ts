@@ -1,11 +1,11 @@
 export class Question {
-  questionNumber = 0;
-  category = '';
-  subCategory = '';
-  question = '';
-  answer = '';
+  questionNumber: number = 0;
+  category: string = '';
+  subCategory: string = '';
+  question: string = '';
+  answer: string = '';
 
-  constructor(category, subCategory, questionNumber, question, answer) {
+  constructor(category: string, subCategory: string, questionNumber: number, question: string, answer: string) {
     this.category = category;
     this.subCategory = subCategory;
     this.questionNumber = questionNumber;
