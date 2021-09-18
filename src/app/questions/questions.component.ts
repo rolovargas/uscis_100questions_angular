@@ -12,7 +12,8 @@ export class QuestionsComponent implements OnInit {
 
   constructor(private questionsService: QuestionsService) { }
 
-  maxQuestionsAllowed = 10;
+  maxQuestionsAllowed = 20;
+  minCorrectQuestionsToPass = 12;
   questionsTaken = 0;
   questionsAttempted: Question[] = [];
   currentQuestion: Question = new Question('', '', 0, '', '');
@@ -64,7 +65,7 @@ export class QuestionsComponent implements OnInit {
   }
 
   finishQuestionnaire() {
-    if (this.totalCorrect >= 6) {
+    if (this.totalCorrect >= this.minCorrectQuestionsToPass) {
       this.endMessage = 'Congratulations! You have passed the test!';
       this.endPic = 'assets/passed.svg';
     } else {
@@ -75,7 +76,7 @@ export class QuestionsComponent implements OnInit {
   }
 
   resetQuestionnaire() {
-    this.maxQuestionsAllowed = 10;
+    this.maxQuestionsAllowed = 20;
     this.questionsTaken = 0;
     this.questionsAttempted = [];
     this.currentQuestion = new Question('', '', 0, '','');
